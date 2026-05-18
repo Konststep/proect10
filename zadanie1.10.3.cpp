@@ -8,20 +8,20 @@ using namespace std;
 int** create_two_dim_array(int rows, int cols) {
     cout << "Введите количество строк: ";
     cin >> rows;
-    int* y_rows = &rows;
+    int* rows = &rows;
     cout << "Введите количество столбцов: ";
     cin >> cols;
-    int* y_cols = &cols;
-    int** mas = new int* [*y_rows]();
-    for (int i = 0; i < *y_rows; i++) {
-        mas[i] = new int[*y_cols]();
+    int* cols = &cols;
+    int** mas = new int* [*rows]();
+    for (int i = 0; i < *rows; i++) {
+        mas[i] = new int[*cols]();
     }
 }
 
-void fill_two_dim_array(int* mas[], int* y_rows, int* y_cols) {
+void fill_two_dim_array(int* mas[], int* rows, int* cols) {
     int str = 1, stolb = 1;
-    for (int i = 0; i < *y_rows; i++) {
-        for (int j = 0; j < *y_cols; j++) {
+    for (int i = 0; i < *rows; i++) {
+        for (int j = 0; j < *cols; j++) {
             mas[i][j] = str * stolb;
             stolb++;
         }
@@ -29,18 +29,18 @@ void fill_two_dim_array(int* mas[], int* y_rows, int* y_cols) {
     }
 }
 
-void print_two_dim_array(int* mas[], int* y_rows, int* y_cols) {
-    for (int i = 0; i < *y_rows; i++) {
-        for (int j = 0; j < *y_cols; j++) {
+void print_two_dim_array(int* mas[], int* rows, int* cols) {
+    for (int i = 0; i < *rows; i++) {
+        for (int j = 0; j < *cols; j++) {
             cout << mas[i][j] << " ";
         }
         cout << endl;
     }
 }
 
-void delete_two_dim_array(int* mas[], int* y_rows)
+void delete_two_dim_array(int* mas[], int* rows)
 {
-    for (int i = 0; i < *y_rows; i++)
+    for (int i = 0; i < *rows; i++)
     {
         delete[] mas[i];
     }

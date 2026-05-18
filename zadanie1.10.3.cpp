@@ -14,7 +14,7 @@ int** create_two_dim_array(int rows, int cols) {
     int* y_cols = &cols;
     int** mas = new int* [*y_rows]();
     for (int i = 0; i < *y_rows; i++) {
-        mas[i] = new int[*y_cols];
+        mas[i] = new int[*y_cols]();
     }
 }
 

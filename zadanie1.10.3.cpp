@@ -12,9 +12,9 @@ int** create_two_dim_array(int rows, int cols) {
     cout << "Введите количество столбцов: ";
     cin >> cols;
     int* y_cols = &cols;
-    int** mas = new int* [rows]();
-    for (int i = 0; i < rows; i++) {
-        mas[i] = new int[cols];
+    int** mas = new int* [*y_rows]();
+    for (int i = 0; i < *y_rows; i++) {
+        mas[i] = new int[*y_cols];
     }
 }
 
